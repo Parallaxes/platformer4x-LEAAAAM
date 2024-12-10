@@ -42,7 +42,7 @@ const assets = {
     island: { src: "/images/platformer/platforms/island.png" },
   },
   backgrounds: {
-    greece: { src: "/images/platformer/backgrounds/greek.png" },
+    greece: { src: "/images/platformer/backgrounds/fort_platformer.png" },
   },
   transitions: {
     loading: { src: "/images/platformer/transitions/greenscreen.png" },
@@ -56,26 +56,26 @@ const assets = {
   },
   players: {
     knight: {
-      src: "/images/platformer/sprites/knight.png",
-      width: 128,
-      height: 128,
-      scaleSize: 120,
+      src: "/images/platformer/sprites/scout_sprite.png",
+      width: 53,
+      height: 60,
+      scaleSize: 50,
       speedRatio: 0.7,
       idle: {
-        left: { row: 1, frames: 23 },
-        right: { row: 0, frames: 23 },
+        left: { row: 0, frames: 1 },
+        right: { row: 1, frames: 1 },
       },
       walk: {
-        left: { row: 7, frames: 20 },
-        right: { row: 6, frames: 20 },
+        left: { row: 0, frames: 4 },
+        right: { row: 1, frames: 4 },
       },
       run: {
-        left: { row: 5, frames: 23 },
-        right: { row: 4, frames: 23 },
+        left: { row: 0, frames: 4 },
+        right: { row: 1, frames: 4},
       },
       jump: {
-        left: { row: 3, frames: 23 },
-        right: { row: 2, frames: 23 },
+        left: { row: 0, frames: 1 },
+        right: { row: 1, frames: 1 },
       },
       hitbox: { widthPercentage: 0.3, heightPercentage: 0.8 }
     }, 

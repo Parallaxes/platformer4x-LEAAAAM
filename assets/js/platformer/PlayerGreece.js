@@ -36,11 +36,11 @@ export class PlayerGreece extends PlayerBase {
     updateJump() {
         let jumpHeightFactor;
         if (GameEnv.difficulty === "easy") {
-            jumpHeightFactor = 0.50;
+            jumpHeightFactor = 0.90;
         } else if (GameEnv.difficulty === "normal") {
-            jumpHeightFactor = 0.40;
+            jumpHeightFactor = 0.65;
         } else {
-            jumpHeightFactor = 0.30;
+            jumpHeightFactor = 0.50;
         }
         this.setY(this.y - (this.bottom * jumpHeightFactor));
     }
@@ -131,9 +131,9 @@ export class PlayerGreece extends PlayerBase {
                             }, 900);
                         }
                     } else if (GameEnv.difficulty === "easy" && this.collisionData.touchPoints.this.right) {
-                        this.x -= 10;
+                        this.x -= 20;
                     } else if (GameEnv.difficulty === "easy" && this.collisionData.touchPoints.this.left) {
-                       this.x += 10;
+                       this.x += 20;
                     }
                 }
                 break;
@@ -142,7 +142,7 @@ export class PlayerGreece extends PlayerBase {
                     if (GameEnv.difficulty === "normal" || GameEnv.difficulty === "hard") {
                         if (this.state.isDying == false) {
                             this.setY(this.y - (this.bottom * 0.6));
-                            this.currentHp -= 33;
+                            this.currentHp -= 50;
                             this.hpBar.updateHpBar(this.currentHp, this.x, this.y, this.canvasWidth, this.canvasHeight)
                             if(this.currentHp == 0){
                                 this.hpBar.updateHpBar(this.currentHp, this.x, this.y, this.canvasWidth, this.canvasHeight)

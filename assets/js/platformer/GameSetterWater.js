@@ -1,4 +1,4 @@
-// GameSetterWater.js Key objective is to define objects for a GameLevel
+// GameSetHills.js Key objective is to define objects for a GameLevel
 import GameSet from './GameSet.js';
 // To build GameLevels, each contains GameObjects from below imports
 import Background from './Background.js';
@@ -81,7 +81,7 @@ const assets = {
     },
     enemies: {
       goomba: {
-        src: "/images/platformer/sprites/goomba.png",
+        src: "/images/platformer/sprites/Fish.png",
         width: 448,
         height: 452,
         scaleSize: 60,
@@ -90,7 +90,7 @@ const assets = {
         hitbox: { widthPercentage: 0.0, heightPercentage: 0.2 }
       },
       flyingGoomba: {
-        src: "/images/platformer/sprites/flying-goomba.png",
+        src: "/images/platformer/sprites/fancyturtle.png",
         width: 448,
         height: 452,
         scaleSize: 60,

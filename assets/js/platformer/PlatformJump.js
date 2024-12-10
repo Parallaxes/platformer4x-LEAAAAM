@@ -24,18 +24,19 @@ export class JumpPlatform extends GameObject {
    
 
     collisionAction() {
-        //collision only detects mario and it only applies to the item block
+        // Collision only applies to the item block when Mario collides with it
         if (this.collisionData.touchPoints.other.id === "player" && this.name === "itemBlock") {
-            if (this.relativeX === 0 || this.relativeX === this.canvas.width) {
-                if (this.relativeX === 0) {
-                    GameControl.startRandomEvent("game");
-                    //console.log("randomEventtriggered", GameControl.randomEventId);
-                };
-                this.relativeX = -1 * this.canvas.width;
-            } else if (this.relativeX === "") {
-                this.relativeX = 0;
-            }
-        }        
+            this.handleItemBlockCollision();
+        }
+    }
+
+    handleItemBlockCollision() {
+        // Make the item block disappear by hiding it
+        this.isVisible = false;
+
+        // Remove the block from the display
+        this.canvas.style.display = 'none';
+
     }
     
     // Set platform position

@@ -39,7 +39,7 @@ export class Lava extends GameObject {
 
     startTimer() {
         setInterval(() => {
-            this.timeUntilRise -= 1000;
+            this.timeUntilRise -= 500;
             if (this.timeUntilRise <= 0) {
                 this.timeUntilRise = 0;
                 this.initialDelayElapsed = true; // Set the flag to true when initial delay is over
@@ -49,8 +49,8 @@ export class Lava extends GameObject {
                 this.timerElement.style.display = 'block'; // Initially hidden
                 this.warningSymbol.style.display = 'block'; // Show the warning symbol
             }
-            this.timerElement.innerText = `TIME UNTIL LAVA RISES: ${this.timeUntilRise / 1000}s`;
-        }, 1000);
+            this.timerElement.innerText = `TIME UNTIL LAVA RISES: ${this.timeUntilRise / 100}s`;
+        }, 100);
     }
 
     update() {
@@ -60,7 +60,7 @@ export class Lava extends GameObject {
             const deltaTime = currentTime - this.lastUpdateTime;
 
             // Update the lava's position based on rising speed and delta time
-            this.islandY -= (this.risingSpeed * deltaTime) / 1000;
+            this.islandY -= (this.risingSpeed * deltaTime) / 10000;
 
             // Update last update time
             this.lastUpdateTime = currentTime;

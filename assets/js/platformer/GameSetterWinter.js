@@ -1,7 +1,8 @@
 // GameSetterWinter.js Key objective is to define objects for a GameLevel
 // To build GameLevels, each contains GameObjects from below imports
-import BackgroundParallax from './BackgroundParallax.js';
+//import BackgroundParallax from './BackgroundParallax.js';
 import BackgroundTransitions from './BackgroundTransitions.js';
+import BackgroundSnowfall from './BackgroundSnowfall.js';
 import BackgroundSnow from './BackgroundSnow.js';
 import Platform from './Platform.js';
 import PlayerWinter from './PlayerWinter.js';
@@ -122,9 +123,9 @@ const assets = {
     miniHogwarts: { src: "/images/platformer/backgrounds/miniHogwarts.png"}, 
     space: { src: "/images/platformer/backgrounds/planet.jpg" },
     castles: { src: "/images/platformer/backgrounds/castles.png" },
-    winter: { src: "/images/platformer/backgrounds/flowerBoylong.jpg", parallaxSpeed: 0.4, moveOnKeyAction: true },
-    snow: { src: "/images/platformer/backgrounds/snowfall.png" },
-    icewater: { src: "/images/platformer/backgrounds/icewater.png", parallaxSpeed: 0.4, moveOnKeyAction: true},
+    winter: { src: "/images/platformer/backgrounds/flowerBoy3.webp" },
+    snow: { src: "/images/platformer/backgrounds/beefall (2).png" },
+    icewater: { src: "/images/platformer/backgrounds/icewater.png" },
     narwhal: { src: "/images/platformer/backgrounds/narwhal.png", parallaxSpeed: 2 },
     mini: { src: "/images/platformer/backgrounds/mini.png" },
     devil: {src: "/images/platformer/backgrounds/devil.png", parallaxSpeed: 2 },
@@ -450,8 +451,8 @@ const assets = {
   // Hills Game Level defintion...
   const objects = [
     // GameObject(s), the order is important to z-index...
-    { name: 'winter', id: 'background', class: BackgroundParallax, data: assets.backgrounds.winter },
-    { name: 'snow', id: 'background', class: BackgroundSnow, data: assets.backgrounds.snow },
+    { name: 'winter', id: 'background', class: BackgroundSnow, data: assets.backgrounds.winter },
+    { name: 'snowfall', id: 'background', class: BackgroundSnowfall, data: assets.backgrounds.snow },
     { name: 'snowyfloor', id: 'platform', class: Platform, data: assets.platforms.snowyfloor },
     { name: 'blocks', id: 'jumpPlatform', class: BlockPlatform, data: assets.platforms.boxendleft, xPercentage: 0.2, yPercentage: 0.82 },
     { name: 'blocks', id: 'jumpPlatform', class: BlockPlatform, data: assets.platforms.boxmiddle, xPercentage: 0.2368, yPercentage: 0.82 },
