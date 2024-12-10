@@ -8,7 +8,14 @@ export class BlockPlatform extends GameObject {
         this.platformY = yPercentage;
 
         // Add glow effect
-        this.canvas.style.boxShadow = "0 0 10px 5px rgba(0, 255, 255, 0.7)";
+        // Change the value of enableGlow to toggle glow
+        let enableGlow = false;
+
+        if (enableGlow) {
+            this.canvas.style.boxShadow = "0 0 10px 5px rgba(0, 255, 255, 0.7)";
+        } else {
+            this.canvas.style.boxShadow = "0 0 0px 0px rgba(0, 255, 255, 0.7)";
+        }
     }
 
     // Required, but no update action
