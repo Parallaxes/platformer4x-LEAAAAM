@@ -1,11 +1,11 @@
-// GameSetterWinter.js Key objective is to define objects for a GameLevel
+// GameSetterTyler.js Key objective is to define objects for a GameLevel
 // To build GameLevels, each contains GameObjects from below imports
 //import BackgroundParallax from './BackgroundParallax.js';
 import BackgroundTransitions from './BackgroundTransitions.js';
 import BackgroundSnowfall from './BackgroundSnowfall.js';
 import BackgroundSnow from './BackgroundSnow.js';
 import Platform from './Platform.js';
-import PlayerWinter from './PlayerWinter.js';
+import PlayerTyler from './PlayerTyler.js';
 import BlockPlatform from './BlockPlatform.js';
 import Coin from './Coin.js';
 import Owl from './FlyingOwl.js';
@@ -62,7 +62,7 @@ const assets = {
       scaleSize: 120,
     },
     coin: { src: "/images/platformer/obstacles/coin.png" },
-    snowflake: { src: "/images/platformer/obstacles/oddfuture.png" },
+    oddfuture: { src: "/images/platformer/obstacles/oddfuture.png" },
     star: { src: "/images/platformer/obstacles/star.png" },
     snitch: { src: "/images/platformer/obstacles/snitch.png" },
     whompingwillow: {
@@ -75,7 +75,7 @@ const assets = {
     narwhalfloor: { src: "/images/platformer/platforms/narwhalfloor.png" },
     sand: { src: "/images/platformer/platforms/sand.png" },
     sandblock: {src:"/images/platformer/platforms/sandblock.png"},
-    snowyfloor: { src: "/images/platformer/platforms/grass.png" },
+    tylerfloor: { src: "/images/platformer/platforms/grass.png" },
     snowywood: { src: "/images/platformer/platforms/snowywood.png" },
     boxmiddle: { src: "/images/platformer/platforms/boxmiddle.png"},
     boxendleft: {src: "/images/platformer/platforms/boxendleft.png"},
@@ -123,8 +123,8 @@ const assets = {
     miniHogwarts: { src: "/images/platformer/backgrounds/miniHogwarts.png"}, 
     space: { src: "/images/platformer/backgrounds/planet.jpg" },
     castles: { src: "/images/platformer/backgrounds/castles.png" },
-    winter: { src: "/images/platformer/backgrounds/flowerBoy3.webp" },
-    snow: { src: "/images/platformer/backgrounds/beefall (2).png" },
+    tyler: { src: "/images/platformer/backgrounds/flowerBoy3.webp" },
+    bees: { src: "/images/platformer/backgrounds/beefall (2).png" },
     icewater: { src: "/images/platformer/backgrounds/icewater.png" },
     narwhal: { src: "/images/platformer/backgrounds/narwhal.png", parallaxSpeed: 2 },
     mini: { src: "/images/platformer/backgrounds/mini.png" },
@@ -133,7 +133,7 @@ const assets = {
   transitions: {
     loading: { src: "/images/platformer/transitions/greenscreen.png" },
     hillsEnd: { src: "/images/platformer/transitions/hillsEnd.png" },
-    winterEnd: { src: "/images/platformer/transitions/winterEnd.png" },
+    tylerEnd: { src: "/images/platformer/transitions/winterEnd.png" },
     greeceEnd: { src: "/images/platformer/transitions/greeceEnd.png" },
     waterEnd: { src: "/images/platformer/transitions/waterEnd.png" },
     quidditchEnd: { src: "/images/platformer/transitions/quidditchEnd.png" },
@@ -451,9 +451,9 @@ const assets = {
   // Hills Game Level defintion...
   const objects = [
     // GameObject(s), the order is important to z-index...
-    { name: 'winter', id: 'background', class: BackgroundSnow, data: assets.backgrounds.winter },
-    { name: 'snowfall', id: 'background', class: BackgroundSnowfall, data: assets.backgrounds.snow },
-    { name: 'snowyfloor', id: 'platform', class: Platform, data: assets.platforms.snowyfloor },
+    { name: 'tyler', id: 'background', class: BackgroundSnow, data: assets.backgrounds.tyler },
+    { name: 'beefall', id: 'background', class: BackgroundSnowfall, data: assets.backgrounds.bees },
+    { name: 'tylerfloor', id: 'platform', class: Platform, data: assets.platforms.tylerfloor },
     { name: 'blocks', id: 'jumpPlatform', class: BlockPlatform, data: assets.platforms.boxendleft, xPercentage: 0.2, yPercentage: 0.82 },
     { name: 'blocks', id: 'jumpPlatform', class: BlockPlatform, data: assets.platforms.boxmiddle, xPercentage: 0.2368, yPercentage: 0.82 },
     { name: 'blocks', id: 'jumpPlatform', class: BlockPlatform, data: assets.platforms.boxmiddle, xPercentage: 0.2736, yPercentage: 0.82 },
@@ -482,16 +482,16 @@ const assets = {
     { name: 'snowman', id: 'snowman', class: Snowman, data: assets.enemies.Snowman, xPercentage: 0.2, minPosition: 0.1, difficulties: ["normal", "hard", "impossible"] },
     { name: 'snowman', id: 'snowman', class: Snowman, data: assets.enemies.Snowman, xPercentage: 0.35, minPosition: 0.1, difficulties: ["normal", "hard", "impossible"] },
     { name: 'snowman', id: 'snowman', class: Snowman, data: assets.enemies.Snowman, xPercentage: 0.5, minPosition: 0.1, difficulties: ["normal", "hard", "impossible"] },
-    { name: 'mario', id: 'player', class: PlayerWinter, data: assets.players.whitemario },
+    { name: 'mario', id: 'player', class: PlayerTyler, data: assets.players.whitemario },
     { name: 'cabin', id: 'finishline', class: FinishLine, data: assets.obstacles.cabin, xPercentage: 0.85, yPercentage: 0.795 },
     { name: 'tubeU', id: 'minifinishline', class: FinishLine, data: assets.obstacles.tubeU, xPercentage: 0.675, yPercentage: 0.9 },
     { name: 'quidditchEnd', id: 'background', class: BackgroundTransitions, data: assets.transitions.quidditchEnd },
   ];
 
-  const GameSetterWinter = {
-    tag: 'Winter',
+  const GameSetterTyler = {
+    tag: 'Tyler',
     assets: assets,
     objects: objects
   };
 
-export default GameSetterWinter;
+export default GameSetterTyler;

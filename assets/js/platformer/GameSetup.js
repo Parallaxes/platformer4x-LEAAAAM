@@ -12,7 +12,7 @@ import GameSetterGreece from './GameSetterGreece.js';
 import GameSetterGreeceMini from './GameSetterGreeceMini.js';
 import GameSetterQuidditch from './GameSetterQuidditch.js';
 import GameSetterHogwarts from './GameSetterHogwarts.js';
-import GameSetterWinter from './GameSetterWinter.js';
+import GameSetterTyler from './GameSetterTyler.js';
 import GameSetterWinterIce from './GameSetterWinterIce.js';
 import GameSetterBoss from './GameSetterBoss.js';
 import GameSetterSkibidi from './GameSetterSkibidi.js';
@@ -232,7 +232,7 @@ const GameSetup = {
     GameLevelSetup(GameSetterWater, this.path, this.playerOffScreenCallBack);
     GameLevelSetup(GameSetterQuidditch, this.path, this.playerOffScreenCallBack);
     GameLevelSetup(GameSetterHogwarts, this.path, this.playerOffScreenCallBack);
-    GameLevelSetup(GameSetterWinter, this.path, this.playerOffScreenCallBack);
+    GameLevelSetup(GameSetterTyler, this.path, this.playerOffScreenCallBack);
     GameLevelSetup(GameSetterWinterIce, this.path, this.playerOffScreenCallBack);
     GameLevelSetup(GameSetterSkibidi, this.path, this.playerOffScreenCallBack);
     GameLevelSetup(GameSetterBoss, this.path, this.playerOffScreenCallBack);

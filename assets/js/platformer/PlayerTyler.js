@@ -12,7 +12,7 @@ import GameControl from './GameControl.js';
  * 
  * @extends PlayerBase 
  */
-export class PlayerWinter extends PlayerBase {
+export class PlayerTyler extends PlayerBase {
 
     /** GameObject instantiation: constructor for PlayerHills object
      * @extends Character 
@@ -185,4 +185,4 @@ export class PlayerWinter extends PlayerBase {
 
 }
 
-export default PlayerWinter;
+export default PlayerTyler;
