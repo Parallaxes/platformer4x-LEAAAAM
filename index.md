@@ -49,6 +49,9 @@ image: /images/platformer/backgrounds/home.png
   <!--Audio for Regicide by Michael Salvatori & Various Artists (Winter) -->
   <audio id="regicide" src="{{site.baseurl}}/assets/audio/regicide.mp3" preload="auto"></audio>
 
+  <!--Audio for Witch Queen by Michael Salvatori & Various Artists (Winter) -->
+  <audio id="witchQueen" src="{{site.baseurl}}/assets/audio/witchQueen.mp3" preload="auto"></audio>
+
 <!--Audio for when it hits top of platform -->
   <audio id ="stomp" src="{{site.baseurl}}/assets/audio/stomp2-93279.mp3" preload="auto"></audio>
 

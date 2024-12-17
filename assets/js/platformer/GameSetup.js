@@ -16,6 +16,7 @@ import GameSetterWinter from './GameSetterWinter.js';
 import GameSetterWinterIce from './GameSetterWinterIce.js';
 import GameSetterBoss from './GameSetterBoss.js';
 import GameSetterSkibidi from './GameSetterSkibidi.js';
+import GameSetterPong from './GameSetterPong.js';
 import GameSetterEnd from './GameSetterEnd.js';
 //test comment
 
@@ -236,6 +237,7 @@ const GameSetup = {
     GameLevelSetup(GameSetterWinterIce, this.path, this.playerOffScreenCallBack);
     GameLevelSetup(GameSetterSkibidi, this.path, this.playerOffScreenCallBack);
     GameLevelSetup(GameSetterBoss, this.path, this.playerOffScreenCallBack);
+    GameLevelSetup(GameSetterPong, this.path, this.playerOffScreenCallBack);
     // End Game
     GameLevelSetup(GameSetterEnd, this.path, this.gameOverCallBack, true);
 

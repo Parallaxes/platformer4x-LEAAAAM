@@ -102,7 +102,7 @@ export class PlayerWinter extends PlayerBase {
                     // Using natural gravity wait for player to reach floor
                     if (Math.abs(this.y - this.bottom) <= GameEnv.gravity) {
                         // Force end of level condition
-                        const index = GameEnv.levels.findIndex(level => level.tag === "Skibidi")
+                        const index = GameEnv.levels.findIndex(level => level.tag === "Pong")
                         GameControl.transitionToLevel(GameEnv.levels[index]);
                     }
                 // 2. Collision between player right and finishline   
