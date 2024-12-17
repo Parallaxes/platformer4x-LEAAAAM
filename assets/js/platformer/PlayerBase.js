@@ -88,7 +88,9 @@ export class PlayerBase extends Character {
         this.setX(this.x);
 
         // Update Y
-        this.y += this.yv;
+        if (this.gravityEnabled) {
+            this.y += this.yv;
+        }
         this.setY(this.y);
 
         GameEnv.PlayerPosition.playerX = this.x;
