@@ -49,7 +49,7 @@ export class LocalStorage{
         });
     }
 
-    loadAll(){//loads data from all keys in this.keys
+    loadAll(){ //loads data from all keys in this.keys
         if(!this.storageAvailable){return}; //check if local storage is possible
         Object.keys(this.keys).forEach(key => {
             this[key] = window.localStorage.getItem(key);
