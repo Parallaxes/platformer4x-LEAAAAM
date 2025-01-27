@@ -103,10 +103,10 @@ image: /images/platformer/backgrounds/home.png
       // Imports to drive game
       import GameSetup from '{{site.baseurl}}/assets/js/platformer/GameSetup.js';
       import GameControl from '{{site.baseurl}}/assets/js/platformer/GameControl.js';
-      import SettingsControl from '{{site.baseurl}}/assets/js/platformer/SettingsControl.js';
       import GameEnv from '{{site.baseurl}}/assets/js/platformer/GameEnv.js';
       import Leaderboard from '{{site.baseurl}}/assets/js/platformer/Leaderboard.js';
       import startCutstory from '{{site.baseurl}}/assets/js/platformer/Cutstory.js';;
+      import SettingsControl from '{{site.baseurl}}/assets/js/platformer/SettingsControl.js';
   
 
       import RandomEvent from '{{site.baseurl}}/assets/js/platformer/RandomEvent.js';
@@ -149,7 +149,8 @@ image: /images/platformer/backgrounds/home.png
       */
   
       // Construct settings sidebar, MVC variable paradigm, and async events to trigger user interaction
-      SettingsControl.initialize();
+      const settingsControl = new SettingsControl();
+      settingsControl.initialize();
 
       // Added by students, should be factored into GameControl or SettingsControl
       Leaderboard.initializeLeaderboard();

@@ -1,4 +1,4 @@
-
+import SettingsControl from './SettingsControl.js';
 // GameSehup.js Key objective is to define GameLevel objects and their assets.
 import GameEnv from './GameEnv.js';
 import GameLevel from './GameLevel.js';
@@ -18,6 +18,7 @@ import GameSetterBoss from './GameSetterBoss.js';
 import GameSetterSkibidi from './GameSetterSkibidi.js';
 import GameSetterEnd from './GameSetterEnd.js';
 import Leaderboard from './Leaderboard.js';
+
 //test comment
 
 /* Coding Style Notes
@@ -243,6 +244,15 @@ const GameSetup = {
 
   }
 }
+
+// Initalize SettingsControl
+const settingsControl = new SettingsControl();
+settingsControl.initialize();
+
+// Start primary game loop
+GameControl.gameLoop();
+
+
 // Bind the methods to the GameSetup object, ensures "this" inside of methods binds to "GameSetup"
 // * * this avoids "Temporal Dead Zone (TDZ)" error... 
 // * * * * "Cannot access 'GameSetup' before initialization", light reading TDZ (ha ha)...
