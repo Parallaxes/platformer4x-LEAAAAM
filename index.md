@@ -151,6 +151,7 @@ image: /images/platformer/backgrounds/home.png
       // Construct settings sidebar, MVC variable paradigm, and async events to trigger user interaction
       const settingsControl = new SettingsControl();
       settingsControl.initialize();
+      settingsControl.createSidebar();
 
       // Added by students, should be factored into GameControl or SettingsControl
       Leaderboard.initializeLeaderboard();

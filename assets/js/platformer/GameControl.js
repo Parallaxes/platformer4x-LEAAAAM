@@ -208,6 +208,11 @@ const GameControl = {
      * @param {Object} newLevel - The new level to transition to.
      */
     async transitionToLevel(newLevel) {
+        console.log("Transitioning to level:", newLevel);
+    if (!newLevel) {
+        console.error("newLevel is undefined");
+        return;
+    }
         this.inTransition = true;
 
         // Destroy existing game objects
@@ -255,13 +260,17 @@ const GameControl = {
                     // next index is in bounds
                     if (currentIndex !== -1 && currentIndex + 1 < GameEnv.levels.length) {
                         // transition to the next level
-                        this.transitionToLevel(GameEnv.levels[currentIndex + 1]);
+                        const nextLevel = GameEnv.levels[currentIndex + 1]; 
+                        console.log("Next level:", nextLevel);
+                        this.transitionToLevel(nextLevel);
                     } 
                 }
             // currentLevel is null, (ie start or restart game)
             } else {
                 // transition to beginning of game
-                this.transitionToLevel(GameEnv.levels[0]);
+                const firstLevel = GameEnv.levels[0];
+                console.log("first level:", firstLevel);
+                this.transitionToLevel(firstLevel);
             }
         }
 
