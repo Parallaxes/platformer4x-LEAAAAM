@@ -246,8 +246,12 @@ const GameSetup = {
 }
 
 // Initalize SettingsControl
-const settingsControl = new SettingsControl();
-settingsControl.initialize();
+document.addEventListener('DOMContentLoaded', () => {
+  console.log("Document loaded, initializing SettingsControl");
+  const settingsControl = new SettingsControl();
+  settingsControl.initialize();
+  settingsControl.createSidebar();
+});
 
 // Start primary game loop
 GameControl.gameLoop();
