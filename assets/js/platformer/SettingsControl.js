@@ -115,6 +115,10 @@ class SettingsControl extends LocalStorage {
     createSidebar() {
         console.log("Creating sidebar");
         const sidebar = document.getElementById("sidebar");
+        if (!sidebar) {
+            console.error("Sidebar element not found");
+            return;
+        }
         sidebar.append(this.levelTable());
         sidebar.append(this.userIDInput());
         sidebar.append(this.gameSpeedInput());
