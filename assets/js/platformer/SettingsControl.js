@@ -95,17 +95,35 @@ class SettingsControl extends LocalStorage {
             GameEnv.funFact = this[this.keys.funFact];
             this.save(this.keys.funFact);
         });
+
+        // Add event listener to settings button
         const settingsButton = document.getElementById("settings-button");
-        if (settingsButton) {
-            settingsButton.addEventListener("click", () => {
-                const sidebar = document.getElementById("sidebar");
-                if (sidebar) {
-                    const isShown = sidebar.style.width === "250px";
-                    sidebar.style.width = isShown ? "0" : "250px";
-                }
-            });
+if (settingsButton) {
+    console.log("Settings button found");
+    settingsButton.addEventListener("click", () => {
+        console.log("Settings button clicked");
+        const sidebar = document.getElementById("sidebar");
+        if (sidebar) {
+            console.log("Sidebar found");
+
+            // New Line: Initialize width if it hasn't been set yet
+            sidebar.style.width = sidebar.style.width || "0";
+
+            console.log("Current sidebar width:", sidebar.style.width);
+            const isShown = sidebar.style.width === "250px";
+            sidebar.style.width = isShown ? "0" : "250px";
+            console.log("Sidebar toggled, new width:", sidebar.style.width);
+        } else {
+            console.error("Sidebar element not found");
         }
+
+    });
+
+    } else {
+        console.error("Settings button not found");
     }
+
+}
 
     applySettings() {
         console.log("Applying settings");

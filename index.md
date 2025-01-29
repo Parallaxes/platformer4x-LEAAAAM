@@ -8,7 +8,7 @@ image: /images/platformer/backgrounds/home.png
 <!-- Syle is now located, as of Jan 2024 v2.0, in _sass/minima/dracula/platformer-styles.scss -->
 
 <!-- DOM Settings Panel (sidebar id and div), managed by SettingsContro.js -->
-<div id="sidebar" class="sidebar" style="z-index: 9999">
+<div id="sidebar" class="sidebar" style="z-index: 9999; width: 0;"></div>
   </div>
   <div id="leaderboardDropDown" class="leaderboardDropDown" style="z-index: 9999">
     <!-- <a href="javascript:void(0)" id="leaderboard-header">&times; Leaderboard</a> -->
