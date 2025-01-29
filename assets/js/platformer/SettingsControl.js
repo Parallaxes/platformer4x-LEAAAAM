@@ -95,6 +95,16 @@ class SettingsControl extends LocalStorage {
             GameEnv.funFact = this[this.keys.funFact];
             this.save(this.keys.funFact);
         });
+        const settingsButton = document.getElementById("settings-button");
+        if (settingsButton) {
+            settingsButton.addEventListener("click", () => {
+                const sidebar = document.getElementById("sidebar");
+                if (sidebar) {
+                    const isShown = sidebar.style.width === "250px";
+                    sidebar.style.width = isShown ? "0" : "250px";
+                }
+            });
+        }
     }
 
     applySettings() {
