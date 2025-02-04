@@ -5,14 +5,14 @@ import GameLevel from './GameLevel.js';
 // To build GameLevels, each contains GameObjects from below imports
 import GameControl from './GameControl.js';
 import GameSet from './GameSet.js';
-import GameSetterStart from './GameSetterStart.js';
+import GameSetterStart from '../../platformer/GameSetterStart.js';
 import GameSetterHills from './GameSetterHills.js';
-import GameSetterQuidditch from './GameSetterQuidditch.js';
-import GameSetterWinter from './GameSetterWinter.js';
-import GameSetterBoss from './GameSetterBoss.js';
-import GameSetterSkibidi from './GameSetterSkibidi.js';
-import GameSetterEnd from './GameSetterEnd.js';
-import Leaderboard from './Leaderboard.js';
+import GameSetterQuidditch from '../../platformer/GameSetterQuidditch.js';
+import GameSetterWinter from '../../platformer/GameSetterWinter.js';
+import GameSetterBoss from '../../platformer/GameSetterBoss.js';
+import GameSetterSkibidi from '../../platformer/GameSetterSkibidi.js';
+import GameSetterEnd from '../../platformer/GameSetterEnd.js';
+import Leaderboard from '../../platformer/Leaderboard.js';
 //test comment
 
 /* Coding Style Notes

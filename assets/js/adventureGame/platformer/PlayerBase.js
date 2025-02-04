@@ -1,5 +1,5 @@
 import GameEnv from './GameEnv.js';
-import Character from './Character.js';
+import Character from '../../platformer/Character.js';
 import GameControl from './GameControl.js';
 /**
  * @class PlayerBase class

@@ -91,7 +91,6 @@ class GameLevelDesert {
         orientation: {rows: 1, columns: 4 },
         down: {row: 0, start: 0, columns: 3 },  // This is the stationary npc, down is default 
         hitbox: { widthPercentage: 0.1, heightPercentage: 0.1 },
-        levelTag: 1,
         // GitHub command quiz 
         quiz: { 
           title: "GitHub Command Quiz",

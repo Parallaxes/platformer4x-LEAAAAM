@@ -1,5 +1,5 @@
 import GameEnv from './GameEnv.js';
-import Socket from './Multiplayer.js';
+import Socket from '../../platformer/Multiplayer.js';
 
 class GameObject {
     // container for all game objects in game

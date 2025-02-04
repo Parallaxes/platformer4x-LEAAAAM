@@ -105,18 +105,13 @@ permalink: /gamify/adventureGame
 </div>
 
 <script type="module">
-    import AdventureGameControl from '{{site.baseurl}}/assets/js/adventureGame/GameControl.js';
+    import GameControl from '{{site.baseurl}}/assets/js/adventureGame/GameControl.js';
     import Prompt from '{{site.baseurl}}/assets/js/adventureGame/Prompt.js';
     import { getStats } from '{{site.baseurl}}/assets/js/adventureGame/StatsManager.js';
-    import GameSetup from '{{site.baseurl}}/assets/js/platformer/GameSetup.js';
-    import PlatformerGameControl from '{{site.baseurl}}/assets/js/platformer/GameControl.js';
-    import SettingsControl from '{{site.baseurl}}/assets/js/platformer/SettingsControl.js';
-    import GameEnv from '{{site.baseurl}}/assets/js/platformer/GameEnv.js';
-    import Leaderboard from '{{site.baseurl}}/assets/js/platformer/Leaderboard.js';
 
     const path = "{{site.baseurl}}";
-    AdventureGameControl.start(path);
-    AdventureGameControl.startTimer();
+    GameControl.start(path);
+    GameControl.startTimer();
     Prompt.initializePrompt();
 
     window.submitAnswer = submitAnswer;

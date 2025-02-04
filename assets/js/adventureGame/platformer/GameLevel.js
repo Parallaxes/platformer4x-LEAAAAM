@@ -1,7 +1,7 @@
 // GameLevel.js key objective is to load and intialize GameObject(s) for a level.
 import GameEnv from './GameEnv.js';
-import Socket from './Multiplayer.js';
-import Character from './Character.js';
+import Socket from '../../platformer/Multiplayer.js';
+import Character from '../../platformer/Character.js';
 
 /**
  * The GameLevel class represents a level in the game.

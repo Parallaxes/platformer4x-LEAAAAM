@@ -1,7 +1,6 @@
 import GameEnv from "./GameEnv.js";
 import Character from "./Character.js";
 import Prompt from "./Prompt.js";
-import { transitionToPlatformerLevel } from "./PlatformerIntegration.js";
 class Npc extends Character {
     constructor(data = null) {
         super(data);
@@ -58,16 +57,16 @@ class Npc extends Character {
         const players = GameEnv.gameObjects.filter(obj => obj.state.collisionEvents.includes(this.spriteData.id));
         const hasQuestions = this.questions.length > 0;
         transitionToPlatformerLevel(1);
-        // if (players.length > 0 && hasQuestions) {
-        //     players.forEach(player => {
-        //         if (!Prompt.isOpen) {
-        //             // Assign this NPC as the current NPC in the Prompt system
-        //             Prompt.currentNpc = this;
-        //             // Open the Prompt panel with this NPC's details
-        //             Prompt.openPromptPanel(this);
-        //         }
-        //     });
-        // }
+        if (players.length > 0 && hasQuestions) {
+            players.forEach(player => {
+                if (!Prompt.isOpen) {
+                    // Assign this NPC as the current NPC in the Prompt system
+                    Prompt.currentNpc = this;
+                    // Open the Prompt panel with this NPC's details
+                    Prompt.openPromptPanel(this);
+                }
+            });
+        }
     }
 
 }

@@ -1,4 +1,4 @@
-import Character from './Character.js';
+import Character from '../../platformer/Character.js';
 import GameEnv from './GameEnv.js';
 import GameControl from './GameControl.js';
 

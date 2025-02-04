@@ -1,15 +1,15 @@
 // GameSetHills.js Key objective is to define objects for a GameLevel
-import BackgroundParallax from './BackgroundParallax.js';
-import BackgroundTransitions from './BackgroundTransitions.js';
-import Platform from './Platform.js';
-import JumpPlatform from './PlatformJump.js';
+import BackgroundParallax from '../../platformer/BackgroundParallax.js';
+import BackgroundTransitions from '../../platformer/BackgroundTransitions.js';
+import Platform from '../../platformer/Platform.js';
+import JumpPlatform from '../../platformer/PlatformJump.js';
 import PlayerHills from './PlayerHills.js';
-import Goomba from './EnemyGoomba.js';
-import FlyingGoomba from './FlyingGoomba.js';
-import Mushroom from './Mushroom.js';
-import Coin from './Coin.js';
-import FinishLine from './FinishLine.js';
-import BlockPlatform from './BlockPlatform.js';
+import Goomba from '../../platformer/EnemyGoomba.js';
+import FlyingGoomba from '../../platformer/FlyingGoomba.js';
+import Mushroom from '../../platformer/Mushroom.js';
+import Coin from '../../platformer/Coin.js';
+import FinishLine from '../../platformer/FinishLine.js';
+import BlockPlatform from '../../platformer/BlockPlatform.js';
 
 // Define the GameSetup object literal
 const assets = {  
